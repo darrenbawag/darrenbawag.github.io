@@ -3,13 +3,13 @@
         "name": "SoulLight",
         "type": "Web Design / UI",
         "image": "/assets/img/works/soullight.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsa totam qui. Expedita harum ratione tempora animi officia, ea magnam ad doloribus odio id esse totam unde doloremque <span class='white-space'>et minus.</span>",
+        "description": "SoulLight is an acoustic guitar landing page website design with guitar products and other details. This is a personal <span class='white-space'>project only.</span>",
         "source": {
             "names": [
                 "View on Behance"
             ],
             "links": [
-                "#"
+                "https://www.behance.net/gallery/81146507/SoulLight-Guitar-Landing-Page"
             ]
         }
     },
@@ -17,13 +17,13 @@
         "name": "E-commerce Furniture Store",
         "type": "Web Design / E-commerce / UI/UX",
         "image": "/assets/img/works/rjc-furniture-store.png",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsa totam qui. Expedita harum ratione tempora animi officia, ea magnam ad doloribus odio id esse totam unde doloremque et minus.",
+        "description": "E-commerce Furniture Store Website is an easy and clean IU/UX design for JRC Furniture Store Website. This is a personal <span class='white-space'>project only.</span>",
         "source": {
             "names": [
                 "View on Behance"
             ],
             "links": [
-                "#"
+                "https://www.behance.net/gallery/79812137/Furniture-Store-E-commerce-Website"
             ]
         }
     }
