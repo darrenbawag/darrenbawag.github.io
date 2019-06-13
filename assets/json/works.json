@@ -1,0 +1,30 @@
+[
+    {
+        "name": "SoulLight",
+        "type": "Web Design / UI",
+        "image": "/assets/img/works/soullight.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsa totam qui. Expedita harum ratione tempora animi officia, ea magnam ad doloribus odio id esse totam unde doloremque <span class='white-space'>et minus.</span>",
+        "source": {
+            "names": [
+                "View on Behance"
+            ],
+            "links": [
+                "#"
+            ]
+        }
+    },
+    {
+        "name": "E-commerce Furniture Store",
+        "type": "Web Design / E-commerce / UI/UX",
+        "image": "/assets/img/works/rjc-furniture-store.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ipsa totam qui. Expedita harum ratione tempora animi officia, ea magnam ad doloribus odio id esse totam unde doloremque et minus.",
+        "source": {
+            "names": [
+                "View on Behance"
+            ],
+            "links": [
+                "#"
+            ]
+        }
+    }
+]

@@ -1,0 +1,135 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    input,
+    textarea {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: black;
+        width: 100%;
+        border: 1px solid black;
+        font-size: 14px;
+        line-height: 34px;
+        padding: 0 10px;
+        margin: 5px 0;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    div {
+        margin-top: 5px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+        color: rgb(201, 0, 0);
+        display: block;
+        height: 10px;
+    }
+
+    .btn-submit {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        color: black;
+        width: 150px;
+        border: 3px solid black;
+        font-size: 14px;
+        line-height: 34px;
+        padding: 0 10px;
+        margin: 20px auto 0 auto;
+        background: white;
+        display: block;
+        cursor: pointer;
+    }
+
+    .btn-submit:hover {
+        color: white;
+        background: black;
+        transition: all ease 0.3s;
+    }
+</style>
+<form action="https://formspree.io/renash12@gmail.com" method="POST" onsubmit="return Validate()">
+    <div id="errorName"></div>
+    <input type="text" id="inputName" name="name" placeholder="Name" maxlength="40" onkeypress="nameFunction()">
+    <div id="errorEmail"></div>
+    <input type="text" id="inputEmail" name="email" placeholder="Email" maxlength="40" onchange="changeEmail()"
+        onkeypress="keyPressEmail()">
+    <div id="errorSubject"></div>
+    <input type="text" id="inputSubject" name="subject" placeholder="Subject" maxlength="40"
+        onkeypress="subjFunction()">
+    <div id="errorMessage"></div>
+    <textarea name="message" id="inputMessage" placeholder="Message" rows="2" onkeypress="msgFunction()"></textarea>
+    <button type="submit" class="btn-submit">Send</button>
+</form>
+<script>
+    function nameFunction() {
+        document.getElementById("errorName").innerHTML = "";
+    }
+
+    function keyPressEmail() {
+        var em = document.getElementById("errorEmail").firstChild.nodeValue;
+        if (em == "* Please enter your email") {
+            document.getElementById("errorEmail").innerHTML = "";
+        }
+    }
+
+    function changeEmail() {
+        var regex = /\S+@\S+\.\S+/,
+            email = document.getElementById("inputEmail").value;
+
+        if (regex.test(email) == true) {
+            document.getElementById("errorEmail").innerHTML = "";
+        } else {
+            document.getElementById("errorEmail").innerHTML = "* Please enter a valid email";
+        }
+    }
+
+    function subjFunction() {
+        document.getElementById("errorSubject").innerHTML = "";
+    }
+
+    function msgFunction() {
+        document.getElementById("errorMessage").innerHTML = "";
+    }
+
+    function Validate() {
+        var regex = /\S+@\S+\.\S+/;
+        var name = document.getElementById("inputName").value,
+            email = document.getElementById("inputEmail").value,
+            subject = document.getElementById("inputSubject").value,
+            message = document.getElementById("inputMessage").value;
+        var errName = document.getElementById("errorName"),
+            errEmail = document.getElementById("errorEmail"),
+            errSubject = document.getElementById("errorSubject"),
+            errMessage = document.getElementById("errorMessage");
+
+
+        if (name && email && subject && message) {
+            if (regex.test(email) == false) {
+                errEmail.innerHTML = "* Please enter a valid email";
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            if (!name) {
+                errName.innerHTML = "* Please tell me your name";
+            }
+            if (!email) {
+                errEmail.innerHTML = "* Please enter your email";
+            } else if (regex.test(email) == false) {
+                errEmail.innerHTML = "* Please enter a valid email";
+            }
+            if (!subject) {
+                errSubject.innerHTML = "* Tell me what this message is about";
+            }
+            if (!message) {
+                errMessage.innerHTML = "* Tell me about something"
+            }
+            return false;
+        }
+    }
+</script>
